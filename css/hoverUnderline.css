@@ -20,7 +20,7 @@
     content: "";
     position: absolute;
     top: calc(100% - 0.125rem);
-    border-bottom: 0.125rem solid #fefefe;
+    border-bottom: 0.125rem solid rgb(178, 231, 80);
     left: 50%;
     right: 50%;
     transition: all 0.5s ease;
