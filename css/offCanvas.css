@@ -1,0 +1,14 @@
+.off-canvas a:hover {
+    color: rgb(178, 231, 80);
+}
+
+.off-canvas a {
+    color: #fefefe;
+    transition: color 0.2s ease-in;
+}
+
+.off-canvas {
+    background: rgb(161, 158, 158);
+    font-family: "BewildermentDemo";
+    font-size: 175%;
+}

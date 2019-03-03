@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BewildermentDemo';
+    src: url('../fonts/BewildermentDemo.ttf')  format('opentype');
+}
+
+@font-face {
+    font-family: 'SweetCookie';
+    src: url('../fonts/SweetCookie.ttf')  format('opentype');
+}

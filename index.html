@@ -17,6 +17,12 @@
         integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/hoverUnderline.css">
     <link rel="stylesheet" href="css/myCss.css" />
+    <link rel="stylesheet" href="css/offCanvas.css"/>
+    <link rel="stylesheet" href="css/socialMediaIcons.css"/>
+    <link rel="stylesheet" href="css/cardIntro.css" />
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="css/fonts.css" />
 
     <!-- Jquery and JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
@@ -38,13 +44,16 @@
     <!--The id is for the title bar-->
     <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="push">
 
+        <!--Avatar Image-->
+        <img alt="" class="card-profile-stats-intro-pic" src="img/155163095211314384(1).gif" />
+        
         <!--vertical menu-->
         <ul class="vertical menu">
             <li><a href="#" target="_blank">Home</a>
             </li>
-            <li><a href="#" target="_blank">Sobre Mí</a>
+            <li><a href="#" target="_blank">Sobre Mi</a>
             </li>
-            <li><a href="#" target="_blank">Tecnologías</a>
+            <li><a href="#" target="_blank">Tecnologias</a>
             </li>
             <li><a href="#" target="_blank">Proyectos</a>
             </li>
@@ -59,9 +68,12 @@
     <div class="off-canvas-content" data-off-canvas-content>
 
         <!--Title bar for when the screen is smaller than a tablet-->
-        <div class="title-bar" data-responsive-toggle="navBar" data-hide-for="medium">
+        <div class="title-bar" id="titleBar" data-responsive-toggle="navBar" data-hide-for="medium">
             <div class="title-bar-left">
                 <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+    
+            </div>
+            <div class="title-bar-right">
                 <span class="title-bar-title">Alejandra Izaguirre</span>
             </div>
         </div>
@@ -69,7 +81,7 @@
         <!--Navigation bar-->
         <!--It's contained in the sticky container to make it stick to the top of the page when scrolling down-->
         <div data-sticky-container>
-            <nav class="top-bar hover-underline-menu" id="navBar" data-sticky data-options="marginTop:0;"
+            <nav class="top-bar hover-underline-menu stacked-for-medium" id="navBar" data-sticky data-options="marginTop:0;"
                 style="width:100%" data-menu-underline-from-center>
 
                 <div class="top-bar-left">
@@ -77,9 +89,9 @@
                         <li class="menu-text">Alejandra Izaguirre</li>
                         <li><a href="#" id="menu_home">Home</a>
                         </li>
-                        <li><a href="#" class="menu" id="menu_sobremi">Sobre Mí</a>
+                        <li><a href="#" class="menu" id="menu_sobremi">Sobre Mi</a>
                         </li>
-                        <li><a href="#" class="menu" id="menu_tecno">Tecnologías</a>
+                        <li><a href="#" class="menu" id="menu_tecno">Tecnologias</a>
                         </li>
                         <li><a href="#" class="menu" id="menu_proyectos">Proyectos</a>
                         </li>
@@ -91,7 +103,7 @@
 
                 <div class="top-bar-right">
                     <ul class="dropdown menu" data-dropdown-menu>
-                        <li><a href="">Languages</a>
+                        <li class="menu-text">Idiomas
                             <ul class="menu vertical">
                                 <li><a href="#">English</a>
                                 </li>

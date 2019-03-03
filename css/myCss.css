@@ -1,21 +1,45 @@
 body {
     background-color: rgb(255, 255, 255);
-}
+  }
   
-.top-bar { 
-    -webkit-text-fill-color: rgb(70, 70, 70); 
+  .top-bar {   
+    -webkit-text-fill-color: rgb(7, 7, 7); 
     width: 100%;
     background: rgb(161, 158, 158);
     padding: 0.15rem;
     
-}
+  }
   
-.top-bar .menu {
+  .top-bar .menu {
     background-color: rgb(161, 158, 158);
-}
+  }
   
-.top-bar .menu a {
+  .top-bar .menu a {
     background: rgb(161, 158, 158);
     color: rgb(255, 255, 255);
-    font-weight: bold;
-}
+  }
+  
+  .top-bar-left .menu a {
+    font-family: "BewildermentDemo";
+    font-size: 150%;
+  }
+  
+  .title-bar {  
+    font-family: "SweetCookie";
+    font-size: 175%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    -webkit-text-fill-color: rgb(7, 7, 7);
+    background: rgb(161, 158, 158);
+  }
+  
+  .top-bar-left .menu-text {
+    font-family: "SweetCookie";
+    font-size: 175%;
+  }
+  
+  .top-bar-right .menu-text {
+    font-family: "BewildermentDemo";
+    font-size: 150%;
+  }
