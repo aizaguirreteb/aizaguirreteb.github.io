@@ -1,0 +1,34 @@
+.hover-underline-menu {
+    width: 100%;
+}
+  
+.top-bar .hover-underline-menu .menu {
+    background-color: rgb(161, 158, 158);
+}
+  
+.top-bar .hover-underline-menu .menu a {
+    background: rgb(161, 158, 158);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+  
+.hover-underline-menu .menu .underline-from-center {
+    position: relative;
+}
+  
+.hover-underline-menu .menu .underline-from-center::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.125rem);
+    border-bottom: 0.125rem solid #fefefe;
+    left: 50%;
+    right: 50%;
+    transition: all 0.5s ease;
+}
+  
+.hover-underline-menu .menu .underline-from-center:hover::after {
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+}
+  
