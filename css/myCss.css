@@ -1,6 +1,44 @@
-body {
-    background-color: rgb(255, 255, 255);
+/* Media query to make letter smaller in smaller devices
+*/
+@media screen and (max-width: 600px) {
+
+  body .off-canvas {
+    font-size: 6vw;
   }
+
+  body .panel {
+    font-size: 3.5vw;
+  }
+}
+
+/* Media queries to make background responsive to size*/
+@media screen and (max-width: 600px){
+    body {
+      background: url("../img/puente\ de\ brooklyn\ poster.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; 
+  
+    }
+}
+
+@media screen and (min-width: 600px){
+  body {
+    background: url("../img/viewempirestateblancoynegro.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+  }
+}
+
+/*CSS*/
+
+body { 
+  background-color: rgb(178, 231, 80);
+}
+  
   
   .top-bar {    
     width: 100%;
@@ -31,8 +69,7 @@ body {
   .title-bar {  
     -webkit-text-fill-color: rgb(7, 7, 7);
     font-family: "SweetCookie";
-    font-size: 175%;
-    position: fixed;
+    font-size: 115%;
     width: 100%;
     top: 0;  
     background: rgb(161, 158, 158);

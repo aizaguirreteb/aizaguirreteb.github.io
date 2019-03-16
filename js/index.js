@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    $.controlador.init('panel_0');
+    $.controlador.init('panel_home');
+
+    $.controlador.initCanvas('panel_home');
 });

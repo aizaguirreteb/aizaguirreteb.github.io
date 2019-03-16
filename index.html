@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/hoverUnderline.css">
     <link rel="stylesheet" href="css/myCss.css" />
     <link rel="stylesheet" href="css/offCanvas.css"/>
-    <link rel="stylesheet" href="css/socialMediaIcons.css"/>
+    <link rel="stylesheet" href="img/socialMediaIcons.css"/>
     <link rel="stylesheet" href="css/cardIntro.css" />
 
     <!--Fonts-->
@@ -42,22 +42,34 @@
     <!--OffCanvas Nav Bar-->
     <!--data-transition=push pushes the content of the page aside-->
     <!--The id is for the title bar-->
-    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="push">
+    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="overlay">
 
+        <!--Close button-->
+        <button class="offcanvas close-button" aria-label="Close menu" type="button" data-close>
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
         <!--Avatar Image-->
         <img alt="" class="card-profile-stats-intro-pic" src="img/155163095211314384(1).gif" />
-        
+        <br>
         <!--vertical menu-->
         <ul class="vertical menu">
-            <li><a href="#" target="_blank">Home</a>
+            <li><a href="#" id="canvas_home" class="canvas" data-close>Home</a>
             </li>
-            <li><a href="#" target="_blank">Sobre Mi</a>
+            <li><a href="#" id="canvas_sobremi" class="canvas" data-close>Sobre Mi</a>
             </li>
-            <li><a href="#" target="_blank">Tecnologias</a>
+            <li><a href="#" id="canvas_tecno" class="canvas" data-close>Tecnologias</a>
             </li>
-            <li><a href="#" target="_blank">Proyectos</a>
+            <li><a href="#" id="canvas_proyectos" class="canvas" data-close>Proyectos</a>
             </li>
-            <li><a href="#" target="_blank">Contacto</a>
+            <li><a href="#" id="canvas_contacto" class="canvas" data-close>Contacto</a>
+            </li>
+        </ul>
+        
+        <ul class="menu align-center">
+            <li><a href="indexEnglish.html">EN</a>
+            </li>
+            <li><a href="index.html">ES</a>
             </li>
         </ul>
 
@@ -68,10 +80,11 @@
     <div class="off-canvas-content" data-off-canvas-content>
 
         <!--Title bar for when the screen is smaller than a tablet-->
+        <!--it's button opens the offcanvas menu-->
         <div class="title-bar" id="titleBar" data-responsive-toggle="navBar" data-hide-for="large">
             <div class="title-bar-left">
                 <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
-    
+
             </div>
             <div class="title-bar-right">
                 <span class="title-bar-title">Alejandra Izaguirre</span>
@@ -107,7 +120,7 @@
                             <ul class="menu vertical align-center">
                                 <li><a href="indexEnglish.html">English</a>
                                 </li>
-                                <li><a href="index.html">Spanish</a>
+                                <li><a href="index.html">Castellano</a>
                                 </li>
 
                             </ul>
@@ -232,7 +245,12 @@
         <div id="panel_sobremi" class="panel">Descripción</div>
 
         <div id="panel_tecno" class="panel">Tecnologías que utilizo</div>
-        <div id="panel_contacto" class="panel">LinkedIn, GitHub</div>
+        <div id="panel_contacto" class="panel">LinkedIn, GitHub
+
+            <a href="https://github.com/aizaguirreteb"><img alt="" class="no-svg webicon github large" src="img/webicon-github.png"></a>
+            <a href="https://www.linkedin.com/in/aleizatebar/"><img alt="" class="no-svg webicon linkedin large" src="img/webicon-linkedin.png"></a>
+
+        </div>
 
     </div>
 

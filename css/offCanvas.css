@@ -3,12 +3,27 @@
 }
 
 .off-canvas a {
+    text-align: center;
     color: #fefefe;
     transition: color 0.2s ease-in;
 }
 
 .off-canvas {
-    background: rgb(161, 158, 158);
+    background-image: url("../img/Endless-Constellation.svg");
     font-family: "BewildermentDemo";
-    font-size: 175%;
+    font-size: 150%;
+}
+
+.off-canvas.is-open .close-button {
+    transition: all 0.7s ease-in-out;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);  
+}
+.off-canvas .close-button { 
+    transition: all 0.6s ease-in-out;
+    color: #fefefe;
+}
+.off-canvas .close-button:hover{
+    color: rgb(178, 231, 80);
 }
