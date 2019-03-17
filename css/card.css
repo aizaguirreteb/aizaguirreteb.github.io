@@ -1,8 +1,12 @@
 .card {
     border-radius: 10px;
-    box-shadow: 0px 0px 7px black;
+    box-shadow: 0px 0px 7px rgb(178, 231, 80);
     
     
+}
+
+.card .card-section {
+  margin: auto;
 }
 .card .card-divider {
     margin: auto;
@@ -11,10 +15,25 @@
 }
 .card .card-divider h2 {
     font-family: "BewildermentDemo";
-    -webkit-text-fill-color: rgb(7, 7, 7);
+    -webkit-text-fill-color: rgb(178, 231, 80);
     font-size: 200%;
 }
 
+.card .card-section .button {
+  background-color: white;
+  border-radius: 4px;
+  border: 2px solid rgb(178, 231, 80);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  color: black;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.card .card-section .button:hover {
+  background-color: rgb(178, 231, 80);
+  color: white;
+}
 .card .hover-border {
     height: 10px;
     width: 450px;

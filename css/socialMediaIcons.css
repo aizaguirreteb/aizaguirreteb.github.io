@@ -27,8 +27,8 @@
     border-radius: 3px; }
   
   .webicon.large {
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px; }
@@ -62,8 +62,8 @@
 .no-svg .webicon.github.small {
     background: url("../img/webicon-github-s.png"); }
   
-.svg .webicon.github {
-    background: url("../img/webicon-github.svg"); }
+.svg .webicon.github.large {
+    background: url("../img/github-logo.svg"); }
 
 .no-svg .webicon.html5 {
     background: url("../img/webicon-html5-m.png"); }
@@ -74,8 +74,8 @@
 .no-svg .webicon.html5.small {
     background: url("../img/webicon-html5-s.png"); }
       
-.svg .webicon.html5 {
-    background: url("../img/webicon-html5.svg"); }
+.svg .webicon.html5 .large{
+    background: url("../img/html-5.svg"); }
 
 .no-svg .webicon.linkedin {
     background: url("../img/webicon-linkedin-m.png"); }
@@ -86,5 +86,29 @@
 .no-svg .webicon.linkedin.small {
     background: url("../img/webicon-linkedin-s.png"); }
       
-.svg .webicon.linkedin {
-    background: url("../img/webicon-linkedin.svg"); }
+.svg .webicon.linkedin .large {
+    background: url("../img/linkedin.svg"); }
+
+.svg .webicon.js .large {
+    background: url("../img/java-script.svg"); }
+
+.svg .webicon.java .large {
+    background: url("../img/java.svg"); }
+
+.svg .webicon.css .large {
+    background: url("../img/css.svg"); }
+
+.svg .webicon.lightroom .large {
+    background: url("../img/lightroom.svg"); }
+
+.svg .webicon.laptop .large {
+    background: url("../img/laptop.svg"); }
+
+.svg .webicon.smartphone .large {
+    background: url("../img/smartphone.svg"); }
+
+.svg .webicon.idea .large {
+    background: url("../img/idea.svg"); }
+
+    .svg .webicon.camera .large {
+        background: url("../img/photo-camera.svg"); }

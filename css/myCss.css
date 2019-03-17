@@ -14,7 +14,7 @@
 /* Media queries to make background responsive to size*/
 @media screen and (max-width: 600px){
     body {
-      background: url("../img/Randomized-Pattern.svg") no-repeat center center fixed;
+      background: url("../img/IMG_0943.JPG") no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -26,7 +26,7 @@
 @media screen and (min-width: 600px){
   body {
     background-color: rgb(178, 231, 80);
-  background: url("../img/Randomized-Pattern.svg") no-repeat center center fixed;
+  background: url("../img/IMG_2603.JPG") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

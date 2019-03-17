@@ -45,6 +45,15 @@ General Style
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .cd-intro-content p {
+    font-family: "BewildermentDemo";
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1em 0;
+    color: white;
+  }
+  
 }
 
 /*
@@ -79,6 +88,14 @@ Media query to change intro section background depending on device
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .cd-intro-content p {
+    font-family: "BewildermentDemo";
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 1em 0;
+    color: black;
+  }
   
 }
 
@@ -88,14 +105,7 @@ Media query to change intro section background depending on device
   font-size: 2.5rem;
   color: rgb(178, 231, 80);
 }
-.cd-intro-content p {
-  font-family: "BewildermentDemo";
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.4;
-  margin: 1em 0;
-  color: white;
-}
+
 .cd-intro-content .action-wrapper {
   display: inline-block;
 }
@@ -774,7 +784,7 @@ Mask
     left: 0;
     height: 100%;
     width: 100%;
-    color: rgb(178, 231, 80);
+    color: white;
     -webkit-animation-name: cd-reveal-up;
     -moz-animation-name: cd-reveal-up;
     animation-name: cd-reveal-up;
@@ -782,7 +792,7 @@ Mask
     -moz-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
   }
-  }
+}
 
 @media screen and (min-width: 600px){
 .mask.cd-intro-content h1::after {
@@ -813,9 +823,9 @@ Mask
   position: absolute;
   top: calc(100% + 8px);
   left: -1em;
-  height: 2px;
+  height: 5px;
   width: calc(100% + 2em);
-  background-color: #ffffff;
+  background-color: rgb(178, 231, 80);
   -webkit-animation: cd-loading-mask 1s 0.3s both;
   -moz-animation: cd-loading-mask 1s 0.3s both;
   animation: cd-loading-mask 1s 0.3s both;
