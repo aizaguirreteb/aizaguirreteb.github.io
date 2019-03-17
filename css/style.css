@@ -826,9 +826,9 @@ Mask
   height: 5px;
   width: calc(100% + 2em);
   background-color: rgb(178, 231, 80);
-  -webkit-animation: cd-loading-mask 1s 0.3s both;
-  -moz-animation: cd-loading-mask 1s 0.3s both;
-  animation: cd-loading-mask 1s 0.3s both;
+  -webkit-animation: cd-loading-mask 3s 0.3s both;
+  -moz-animation: cd-loading-mask 3s 0.3s both;
+  animation: cd-loading-mask 3s 0.3s both;
 }
 @media only screen and (min-width: 768px) {
   .mask.cd-intro-content h1 {
