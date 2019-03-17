@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
+<html lang="en-EN">
 
 <head>
     <!--Meta Tags-->
@@ -17,9 +17,13 @@
         integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/hoverUnderline.css">
     <link rel="stylesheet" href="css/myCss.css" />
-    <link rel="stylesheet" href="css/offCanvas.css"/>
-    <link rel="stylesheet" href="css/socialMediaIcons.css"/>
+    <link rel="stylesheet" href="css/offCanvas.css" />
+    <link rel="stylesheet" href="img/socialMediaIcons.css" />
     <link rel="stylesheet" href="css/cardIntro.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/homeHeader.css" />
+
 
     <!--Fonts-->
     <link rel="stylesheet" href="css/fonts.css" />
@@ -33,208 +37,258 @@
     <!--My JS & CSS Styles-->
     <script src="js/index.js"></script>
     <script src="js/controlador.js"></script>
+    <script src="js/intro.js"></script>
+
 
 
 </head>
 
 <body>
 
-    <!--OffCanvas Nav Bar-->
-    <!--data-transition=push pushes the content of the page aside-->
-    <!--The id is for the title bar-->
-    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="push">
+   
 
-        <!--Avatar Image-->
-        <img alt="" class="card-profile-stats-intro-pic" src="img/155163095211314384(1).gif" />
-        
-        <!--vertical menu-->
-        <ul class="vertical menu">
-            <li><a href="#" target="_blank">Home</a>
-            </li>
-            <li><a href="#" target="_blank">About Me</a>
-            </li>
-            <li><a href="#" target="_blank">Tecnologies</a>
-            </li>
-            <li><a href="#" target="_blank">Projects</a>
-            </li>
-            <li><a href="#" target="_blank">Contact</a>
-            </li>
-        </ul>
+    <!--The content of the page is inside this div to show and hide it along with the intro section-->
+    <div id="site" class="site">
+
+        <!--OffCanvas Nav Bar-->
+        <!--data-transition=push pushes the content of the page aside-->
+        <!--The id is for the title bar-->
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="overlay">
+
+            <!--Close button-->
+            <button class="offcanvas close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br>
+            <!--Avatar Image-->
+            <img alt="" class="card-profile-stats-intro-pic" src="img/155163095211314384(1).gif" />
+            <br>
+            <!--vertical menu-->
+            <ul class="vertical menu">
+                <li><a href="#" id="canvas_home" class="canvas" data-close>Home</a>
+                </li>
+                <li><a href="#" id="canvas_aboutme" class="canvas" data-close>About Me</a>
+                </li>
+                <li><a href="#" id="canvas_tecno" class="canvas" data-close>Tecnologies</a>
+                </li>
+                <li><a href="#" id="canvas_projects" class="canvas" data-close>Projects</a>
+                </li>
+                <li><a href="#" id="canvas_contact" class="canvas" data-close>Contact</a>
+                </li>
+            </ul>
+
+            <!--simple menu to show short language options-->
+            <ul class="menu align-center">
+                <li><a href="indexEnglish.html">EN</a>
+                </li>
+                <li><a href="index.html">ES</a>
+                </li>
+            </ul>
 
 
-    </div>
-
-    <!--This is the content of the page-->
-    <div class="off-canvas-content" data-off-canvas-content>
-
-        <!--Title bar for when the screen is smaller than a tablet-->
-        <div class="title-bar" id="titleBar" data-responsive-toggle="navBar" data-hide-for="large">
-            <div class="title-bar-left">
-                <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
-    
-            </div>
-            <div class="title-bar-right">
-                <span class="title-bar-title">Alejandra Izaguirre</span>
-            </div>
         </div>
 
-        <!--Navigation bar-->
-        <!--It's contained in the sticky container to make it stick to the top of the page when scrolling down-->
-        <div data-sticky-container>
-            <nav class="top-bar hover-underline-menu" id="navBar" data-sticky data-options="marginTop:0;"
-                style="width:100%" data-menu-underline-from-center>
+        <!--This is the content of the page-->
+        <div class="off-canvas-content" data-off-canvas-content>
 
-                <div class="top-bar-left">
-                    <ul class="menu">
-                        <li class="menu-text">Alejandra Izaguirre</li>
-                        <li><a href="#" id="menu_home">Home</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_aboutme">About Me</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_tecnologies">Tecnologies</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_projects">Projects</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_contact">Contact</a>
-                        </li>
-                    </ul>
+            <!--Title bar for when the screen is smaller than a tablet-->
+            <!--it's button opens the offcanvas menu-->
+            <div class="title-bar" id="titleBar" data-responsive-toggle="navBar" data-hide-for="large">
+                <div class="title-bar-left">
+                    <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+
+                </div>
+                <div class="title-bar-right">
+                    <span class="title-bar-title">Alejandra Izaguirre</span>
+                </div>
+            </div>
+
+            <!--Navigation bar-->
+            <!--It's contained in the sticky container to make it stick to the top of the page when scrolling down-->
+            <div data-sticky-container>
+                <nav class="top-bar hover-underline-menu" id="navBar" data-sticky data-options="marginTop:0;"
+                    style="width:100%" data-menu-underline-from-center>
+
+                    <div class="top-bar-left">
+                        <ul class="menu">
+                            <li class="menu-text">Alejandra Izaguirre</li>
+                            <li><a href="#" id="menu_home">Home</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_aboutme">About Me</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_tecno">Tecnologies</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_projects">Projects</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_contact">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="top-bar-right">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li class="menu-text">Language
+                                <ul class="menu vertical align-center">
+                                    <li><a href="indexEnglish.html">English</a>
+                                    </li>
+                                    <li><a href="index.html">Castellano</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                </nav>
+            </div>
+
+
+            <!--Content of the page-->
+            <div id="panel_home" class="panel">
+
+                <div class="hero-section" style="margin: auto">
+                    <div class="hero-section-text">
+                        <h1>Hey!</h1>
+                        <h5>My name is Alejandra. I'm a spanish developer, cat lover and amateur photographer.</h5>
+                    </div>
 
                 </div>
 
-                <div class="top-bar-right">
-                    <ul class="dropdown menu" data-dropdown-menu>
-                        <li class="menu-text">Language
-                            <ul class="menu vertical align-center">
-                                <li><a href="indexEnglish.html">English</a>
-                                </li>
-                                <li><a href="index.html">Spanish</a>
-                                </li>
 
-                            </ul>
-                        </li>
-                    </ul>
+
+
+            </div>
+
+            <div id="panel_projects" class="panel">
+                <br>
+                <div class="grid-container fluid">
+                    <div class="grid-x small-up-1 medium-up-2 large-3 align-center">
+                        <div class="cell">
+                            <div class="card slide-in-top">
+                                <div class="card-divider">
+                                    <h2>HTML Manual</h2>
+                                </div>
+                                <div class="card-section">
+                                    <img alt="" src="img/manual1.PNG">
+                                </div>
+                                <div class="card-section" style="text-align: center">
+                                    Single Page Application created to give basic information about coding in HTML, CSS and 
+                                    about some general Web Accesibility Issues.
+                                    Its design is responsive to device size and the information is displayed with various examples
+                                    and demos.
+                                </div>
+                                <div class="card-section">
+                                    <a href="https://github.com/aizaguirreteb/ManualHTML" class="button">See on Github</a>
+                                </div>
+                                <!--animated green line at the bottom of the card-->
+                                <div class="hover-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="panel_aboutme" class="panel">
+
+                <br>
+                <div class="grid-container fluid">
+                    <div class="grid-x small-up-1 medium-up-2 large-3 align-center">
+                        <div class="cell">
+                            <div class="card slide-in-top">
+                                <div class="card-divider">
+                                    <h2>About Me</h2>
+                                </div>
+                                <div class="card-section" style="margin: auto">
+                                    <span class="show-for-large"><img alt="" src="img/155163095211314384(1).gif"></span>
+                                </div>
+                                <div class="card-section" style="text-align: center">
+                                    I'm as a creative person as I am logic and practical. I recently discovered that web design and 
+                                    coding allow me to develop my creativity further than where my love for photography was taking me,
+                                    while still using my mathematical side.
+
+                                    I always give much importance to even the smallest details in my work and I try to make it fun and beautiful,
+                                    as well as noteworthy.
+                                    
+                                </div>
+                                <!--animated green line at the bottom of the card-->
+                                <div class="hover-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="panel_tecno" class="panel">
+                <br>
+                <div class="grid-container fluid">
+                    <div class="grid-x small-up-1 medium-up-2 large-3 align-center">
+                        <div class="cell">
+                            <div class="card slide-in-top">
+                                <div class="card-divider">
+                                    <h2>Tecnologies</h2>
+                                </div>
+                                <div class="card-section" style="margin: auto">
+                                    <img alt="" src="img/html-5.svg" class="webicon svg html5 large">
+                                    <img alt="" src="img/java-script.svg" class="webicon svg js large">
+                                    <img alt="" src="img/java.svg" class="webicon svg java large">
+                                    <img alt="" src="img/css.svg" class="webicon svg css large">
+                                    <img alt="" src="img/lightroom.svg" class="webicon svg lightroom large">
+                                </div>
+                                <div class="card-section" style="text-align: center">
+                                    These are the main tecnologies and tools that I use for now, but in this industry of 
+                                    constant change and evolution it is important to be prepared to learn more languages and utils.
+                                    
+                                    <br>
+                                    <br>
+                                    <img alt="" class="webicon svg camera large" src="img/photo-camera.svg">
+                                    <img alt="" class="webicon svg smartphone large" src="img/smartphone.svg">
+                                    <img alt="" class="webicon svg laptop large" src="img/laptop.svg">
+                                    <br>
+                                    I can either code for mobile or desktop devices, along with some photographic work.
+                                </div>
+
+                                <!--animated green line at the bottom of the card-->
+                                <div class="hover-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="panel_contact" class="panel">
+                <br>
+                <div class="grid-container fluid">
+                    <div class="grid-x small-up-1 medium-up-2 large-3 align-center">
+                        <div class="cell">
+                            <div class="card slide-in-top">
+                                <div class="card-divider">
+                                    <h2>Contact</h2>
+                                </div>
+                                <div class="card-section" style="margin: auto">
+                                    You can contact me on my LinkedIn profile or take a look at the code of my work on my GitHub profile.
+                                </div>
+                                <div class="card-section" style="text-align: center">
+                                    <a href="https://github.com/aizaguirreteb"><img alt=""
+                                            class="svg webicon github large" src="img/github-logo.svg"></a>
+                                    <a href="https://www.linkedin.com/in/aleizatebar/"><img alt=""
+                                            class="svg webicon linkedin large" src="img/linkedin.svg"></a>
+                                </div>
+
+                                <!--animated green line at the bottom of the card-->
+                                <div class="hover-border"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
+            </div>
 
-            </nav>
         </div>
-
-
-        <!--Content of the page-->
-        <div id="panel_home" class="panel">This is the main view
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-        </div>
-
-        <div id="panel_projects" class="panel">Redirection to github</div>
-        <div id="panel_aboutme" class="panel">Myself</div>
-
-        <div id="panel_tecnologies" class="panel">Tecnologies I use</div>
-        <div id="panel_contact" class="panel">Redirection to LinkedIn, GitHub</div>
 
     </div>
-
 
 
     <!--Initializes all the Foundation plugins at once-->
