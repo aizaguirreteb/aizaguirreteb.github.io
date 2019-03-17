@@ -17,9 +17,12 @@
         integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og=" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/hoverUnderline.css">
     <link rel="stylesheet" href="css/myCss.css" />
-    <link rel="stylesheet" href="css/offCanvas.css"/>
-    <link rel="stylesheet" href="img/socialMediaIcons.css"/>
+    <link rel="stylesheet" href="css/offCanvas.css" />
+    <link rel="stylesheet" href="img/socialMediaIcons.css" />
     <link rel="stylesheet" href="css/cardIntro.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
 
     <!--Fonts-->
     <link rel="stylesheet" href="css/fonts.css" />
@@ -33,227 +36,174 @@
     <!--My JS & CSS Styles-->
     <script src="js/index.js"></script>
     <script src="js/controlador.js"></script>
+    <script src="js/intro.js"></script>
+
 
 
 </head>
 
 <body>
 
-    <!--OffCanvas Nav Bar-->
-    <!--data-transition=push pushes the content of the page aside-->
-    <!--The id is for the title bar-->
-    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="overlay">
-
-        <!--Close button-->
-        <button class="offcanvas close-button" aria-label="Close menu" type="button" data-close>
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <br>
-        <!--Avatar Image-->
-        <img alt="" class="card-profile-stats-intro-pic" src="img/155163095211314384(1).gif" />
-        <br>
-        <!--vertical menu-->
-        <ul class="vertical menu">
-            <li><a href="#" id="canvas_home" class="canvas" data-close>Home</a>
-            </li>
-            <li><a href="#" id="canvas_sobremi" class="canvas" data-close>Sobre Mi</a>
-            </li>
-            <li><a href="#" id="canvas_tecno" class="canvas" data-close>Tecnologias</a>
-            </li>
-            <li><a href="#" id="canvas_proyectos" class="canvas" data-close>Proyectos</a>
-            </li>
-            <li><a href="#" id="canvas_contacto" class="canvas" data-close>Contacto</a>
-            </li>
-        </ul>
-        
-        <ul class="menu align-center">
-            <li><a href="indexEnglish.html">EN</a>
-            </li>
-            <li><a href="index.html">ES</a>
-            </li>
-        </ul>
-
+    <!--Div to separate intro from main page-->
+    <div id="intro">
+        <section class="cd-intro">
+            <div class="cd-intro-content mask">
+                <h1 data-content="Alejandra Izaguirre"><span>Alejandra Izaguirre</span></h1>
+                <div class="action-wrapper">
+                    <p>
+                        Programmer Cat Lover
+                    </p>
+                </div>
+            </div>
+        </section>
 
     </div>
 
-    <!--This is the content of the page-->
-    <div class="off-canvas-content" data-off-canvas-content>
+    <!--The content of the page is inside this div to show and hide it along with the intro section-->
+    <div id="site" class="site">
 
-        <!--Title bar for when the screen is smaller than a tablet-->
-        <!--it's button opens the offcanvas menu-->
-        <div class="title-bar" id="titleBar" data-responsive-toggle="navBar" data-hide-for="large">
-            <div class="title-bar-left">
-                <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
+        <!--OffCanvas Nav Bar-->
+        <!--data-transition=push pushes the content of the page aside-->
+        <!--The id is for the title bar-->
+        <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-transition="overlay">
 
-            </div>
-            <div class="title-bar-right">
-                <span class="title-bar-title">Alejandra Izaguirre</span>
-            </div>
+            <!--Close button-->
+            <button class="offcanvas close-button" aria-label="Close menu" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <br>
+            <!--Avatar Image-->
+            <img alt="" class="card-profile-stats-intro-pic" src="img/155163095211314384(1).gif" />
+            <br>
+            <!--vertical menu-->
+            <ul class="vertical menu">
+                <li><a href="#" id="canvas_home" class="canvas" data-close>Home</a>
+                </li>
+                <li><a href="#" id="canvas_sobremi" class="canvas" data-close>Sobre Mi</a>
+                </li>
+                <li><a href="#" id="canvas_tecno" class="canvas" data-close>Tecnologias</a>
+                </li>
+                <li><a href="#" id="canvas_proyectos" class="canvas" data-close>Proyectos</a>
+                </li>
+                <li><a href="#" id="canvas_contacto" class="canvas" data-close>Contacto</a>
+                </li>
+            </ul>
+
+            <!--simple menu to show short language options-->
+            <ul class="menu align-center">
+                <li><a href="indexEnglish.html">EN</a>
+                </li>
+                <li><a href="index.html">ES</a>
+                </li>
+            </ul>
+
+
         </div>
 
-        <!--Navigation bar-->
-        <!--It's contained in the sticky container to make it stick to the top of the page when scrolling down-->
-        <div data-sticky-container>
-            <nav class="top-bar hover-underline-menu" id="navBar" data-sticky data-options="marginTop:0;"
-                style="width:100%" data-menu-underline-from-center>
+        <!--This is the content of the page-->
+        <div class="off-canvas-content" data-off-canvas-content>
 
-                <div class="top-bar-left">
-                    <ul class="menu">
-                        <li class="menu-text">Alejandra Izaguirre</li>
-                        <li><a href="#" id="menu_home">Home</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_sobremi">Sobre Mi</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_tecno">Tecnologias</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_proyectos">Proyectos</a>
-                        </li>
-                        <li><a href="#" class="menu" id="menu_contacto">Contacto</a>
-                        </li>
-                    </ul>
+            <!--Title bar for when the screen is smaller than a tablet-->
+            <!--it's button opens the offcanvas menu-->
+            <div class="title-bar" id="titleBar" data-responsive-toggle="navBar" data-hide-for="large">
+                <div class="title-bar-left">
+                    <button class="menu-icon" type="button" data-open="offCanvasLeft"></button>
 
                 </div>
-
-                <div class="top-bar-right">
-                    <ul class="dropdown menu" data-dropdown-menu>
-                        <li class="menu-text">Idiomas
-                            <ul class="menu vertical align-center">
-                                <li><a href="indexEnglish.html">English</a>
-                                </li>
-                                <li><a href="index.html">Castellano</a>
-                                </li>
-
-                            </ul>
-                        </li>
-                    </ul>
+                <div class="title-bar-right">
+                    <span class="title-bar-title">Alejandra Izaguirre</span>
                 </div>
+            </div>
+
+            <!--Navigation bar-->
+            <!--It's contained in the sticky container to make it stick to the top of the page when scrolling down-->
+            <div data-sticky-container>
+                <nav class="top-bar hover-underline-menu" id="navBar" data-sticky data-options="marginTop:0;"
+                    style="width:100%" data-menu-underline-from-center>
+
+                    <div class="top-bar-left">
+                        <ul class="menu">
+                            <li class="menu-text">Alejandra Izaguirre</li>
+                            <li><a href="#" id="menu_home">Home</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_sobremi">Sobre Mi</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_tecno">Tecnologias</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_proyectos">Proyectos</a>
+                            </li>
+                            <li><a href="#" class="menu" id="menu_contacto">Contacto</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="top-bar-right">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li class="menu-text">Idiomas
+                                <ul class="menu vertical align-center">
+                                    <li><a href="indexEnglish.html">English</a>
+                                    </li>
+                                    <li><a href="index.html">Castellano</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
 
 
 
-            </nav>
-        </div>
+                </nav>
+            </div>
 
 
-        <!--Content of the page-->
-        <div id="panel_home" class="panel">Portada con algo interesante
+            <!--Content of the page-->
+            <div id="panel_home" class="panel">Portada con algo interesante
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
+            </div>
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
+            <div id="panel_proyectos" class="panel">Redirección a proyecto ya hecho en gitHub, con una imagen en forma
+                de
+                card/viñeta y explicación</div>
+            <div id="panel_sobremi" class="panel">Descripción
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
+                <!--Main structure and main possible options for card element-->
+                <div class="grid-container fluid">
+                    <div class="grid-x small-up-1 medium-up-2 large-3 align-center">
+                        <div class="cell">
+                            <div class="card slide-in-top">
+                                <div class="card-divider">
+                                    <h2>Sobre Mi</h2>
+                                </div>
+                                <div class="card-section" style="margin: auto">
+                                    <span class="show-for-large"><img alt="" src="img/155163095211314384(1).gif"></span>
+                                </div>
+                                <div class="card-section" style="text-align: center">
+                                    HOla
+                                </div>
+                                <!--animated green line at the bottom of the card-->
+                                <div class="hover-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
+            <div id="panel_tecno" class="panel">Tecnologías que utilizo</div>
+            <div id="panel_contacto" class="panel">LinkedIn, GitHub
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus necessitatibus, recusandae unde
-            quaerat nam
-            assumenda quidem, totam debitis, asperiores aperiam natus vero. Qui commodi dolorem saepe, cumque, rerum
-            placeat
-            eveniet!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae consequatur aperiam
-            voluptate
-            eum! Delectus dignissimos ab, totam est voluptatibus esse porro, suscipit incidunt minus provident dolorem
-            impedit,
-            eaque explicabo! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas consequatur, illum,
-            dolores
-            nisi, impedit laboriosam dolorum quibusdam quo incidunt vel a amet maiores nemo provident sapiente nesciunt
-            placeat.
-            Porro, corporis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam quaerat voluptates eos
-            distinctio eveniet! Quas eligendi accusantium nisi totam voluptatibus, error ut, maxime modi dignissimos
-            veniam,
-            reiciendis alias quia? Sed!
-        </div>
+                <a href="https://github.com/aizaguirreteb"><img alt="" class="no-svg webicon github large"
+                        src="img/webicon-github.png"></a>
+                <a href="https://www.linkedin.com/in/aleizatebar/"><img alt="" class="no-svg webicon linkedin large"
+                        src="img/webicon-linkedin.png"></a>
 
-        <div id="panel_proyectos" class="panel">Redirección a proyecto ya hecho en gitHub, con una imagen en forma de
-            card/viñeta y explicación</div>
-        <div id="panel_sobremi" class="panel">Descripción</div>
-
-        <div id="panel_tecno" class="panel">Tecnologías que utilizo</div>
-        <div id="panel_contacto" class="panel">LinkedIn, GitHub
-
-            <a href="https://github.com/aizaguirreteb"><img alt="" class="no-svg webicon github large" src="img/webicon-github.png"></a>
-            <a href="https://www.linkedin.com/in/aleizatebar/"><img alt="" class="no-svg webicon linkedin large" src="img/webicon-linkedin.png"></a>
+            </div>
 
         </div>
 
     </div>
-
 
 
     <!--Initializes all the Foundation plugins at once-->
