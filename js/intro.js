@@ -3,8 +3,8 @@ var timer = 0; //global variable
 
 $(document).ready( function () {
 
-        $("#site").hide(); 
-        timer = setInterval( showSite , 3500 ) 
+      $("#site").hide(); 
+      timer = setInterval( showSite , 3500 ) 
 
 });
 
