@@ -13,4 +13,5 @@ function showSite() {
 
       $("#intro").fadeOut();
       $("#site").fadeIn();
+      $(document).foundation();
 }
